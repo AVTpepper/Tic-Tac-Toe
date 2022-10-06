@@ -7,13 +7,28 @@
     font-family: "Playfair Display", serif;
 }
 
+h1 { 
+    text-align: center;
+    font-size: 42px;
+    margin-top: 30px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    font-size: 36px;
+    text-align: center;
+}
+
 .game-board {
     width: 100vw;
-    height: 100vh;
     display: grid;
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(3, auto);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .box {
@@ -21,5 +36,18 @@
     height: 100px;
     background-color: lightcoral;
     border: 1px solid black;
-
+    cursor:pointer;
 }
+
+.button-area {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 20px;
+    width: 100px;
+    margin: 20px;
+}
+
