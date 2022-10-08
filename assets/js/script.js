@@ -12,6 +12,23 @@ let spaces = Array(9).fill(null)
 
 console.log(spaces)
 
+const startGame = () => {
+    boxes.forEach(box => box.addEventListener("click", clickedBox))
+}
+
+function clickedBox(event) {
+    console.log(event.target)
+    const id = event.target.id
+
+    if(!spaces[id]) {
+        spaces[id] = currentPlayer
+        event.target.innerText = currentPlayer
+
+        currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
+    } 
+}
+
+startGame()
 
 
 

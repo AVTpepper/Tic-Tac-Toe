@@ -57,19 +57,19 @@ button {
     cursor: pointer;
 }
 
-#box1, #box2, #box3 {
+#box0, #box1, #box2 {
     border-top: none;
 }
 
-#box1, #box4, #box7 {
+#box0, #box3, #box6 {
     border-left: none;
 }
 
-#box3, #box6, #box9 {
+#box2, #box5, #box8 {
     border-right: none;
 }
 
-#box7, #box8, #box9 {
+#box6, #box7, #box8 {
     border-bottom: none;
 }
 
