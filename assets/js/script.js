@@ -1,16 +1,17 @@
 let boxes = Array.from(document.getElementsByClassName("box"))
-let resetBtn = document.getElementsByClassName("reset")
-let newGame = document.getElementsByClassName("new-game")
-let help = document.getElementsByClassName("help")
+let resetBtn = document.getElementById("reset")
+let newGame = document.getElementsById("new-game")
+let help = document.getElementsById("help")
 
 console.log(boxes)
 
+
 const O_TEXT = "O"
 const X_TEXT = "X"
-let currentPlayer = X_TEXT
-let spaces = Array(9).fill(null)
+let currentPlayer = X_TEXT;
+let spaces = Array(9).fill(null);
 
-console.log(spaces)
+
 
 const startGame = () => {
     boxes.forEach(box => box.addEventListener("click", clickedBox))
@@ -24,11 +25,24 @@ function clickedBox(event) {
         spaces[id] = currentPlayer
         event.target.innerText = currentPlayer
 
-        currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
+        currentPlayer = currentPlayer == X_TEXT ? O_TEXT: X_TEXT
     } 
 }
 
-startGame()
+
+resetBtn.addEventListener("click", resetBoard)
+
+function resetBoard() {
+    spaces.fill(null)
+
+    boxes.forEach (box => {
+        box.innerText= ""
+    })
+
+    currentPlayer = X_TEXT
+}
+
+startGame() 
 
 
 
