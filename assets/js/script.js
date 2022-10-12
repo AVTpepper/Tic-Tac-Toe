@@ -1,52 +1,63 @@
-let boxes = Array.from(document.getElementsByClassName("box"))
-let resetBtn = document.getElementById("reset")
-let newGame = document.getElementsById("new-game")
-let help = document.getElementsById("help")
 
-console.log(boxes)
+/* second try below with help from mentor
+
+let boxes = Array.from(document.getElementsByClassName("box"));
+let resetBtn = document.getElementById("reset");
+let newGame = document.getElementById("new-game");
+let help = document.getElementById("help");
 
 
-const O_TEXT = "O"
-const X_TEXT = "X"
+const gridSize = 3;
+const O_TEXT = "O";
+const X_TEXT = "X";
 let currentPlayer = X_TEXT;
 let spaces = Array(9).fill(null);
 
 
 
+
 const startGame = () => {
-    boxes.forEach(box => box.addEventListener("click", clickedBox))
+    //boxes.forEach(box => box.addEventListener("click", clickedBox));
+    let gameBoard = document.getElementsByClassName("game-board");
+    const boxes = Array(gridSize * gridSize).forEach(index => {
+        return `<div class="box" id=${index}></div>`
+    })
+    gameBoard.appendChild(boxes)
 }
 
 function clickedBox(event) {
-    console.log(event.target)
-    const id = event.target.id
+    console.log(event.target);
+    const id = event.target.id;
 
-    if(!spaces[id]) {
-        spaces[id] = currentPlayer
-        event.target.innerText = currentPlayer
+    if(!spaces[id -1]) {
+        spaces[id -1] = currentPlayer;
+        event.target.innerText = currentPlayer;
 
-        currentPlayer = currentPlayer == X_TEXT ? O_TEXT: X_TEXT
+        currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
     } 
 }
 
 
-resetBtn.addEventListener("click", resetBoard)
-
-function resetBoard() {
+function reset() {
+    console.log(spaces)
     spaces.fill(null)
-
-    boxes.forEach (box => {
-        box.innerText= ""
+    console.log(spaces)
+    boxes.forEach( box => {
+        box.innerText = ""
     })
-
     currentPlayer = X_TEXT
 }
 
+resetBtn.addEventListener("click", reset)
+
+
+
 startGame() 
 
+- second try above ^ with help from mentor */ 
 
+/* - original try below
 
-/* 
 const boxes = document.getElementsByClassName("box");
 const reset = document.getElementsByClassName("reset");
 const newGame = document.getElementsByClassName("new-game");
@@ -71,8 +82,8 @@ function myFunction() {
     this.textContent ="X";
 }
 
-*/
-/*
+
+
 document.addEventListener("DOMContentLoaded", function() {
     let boxes = document.getElementsByClassName("box");
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 * {
     margin: 0;
@@ -57,6 +57,23 @@ button {
     cursor: pointer;
 }
 
+.br-0 {
+    border-right: none;
+}
+
+.bl-0 {
+
+}
+
+.bb-0 {
+
+}
+
+.bt-0 {
+
+}
+
+
 #box0, #box1, #box2 {
     border-top: none;
 }
@@ -72,4 +89,4 @@ button {
 #box6, #box7, #box8 {
     border-bottom: none;
 }
-
+*/
