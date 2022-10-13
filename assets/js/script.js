@@ -1,4 +1,174 @@
 
+const playerSelection = document.createElement("div");
+    playerSelection.classList.add("player-selection-wrap");
+    document.body.appendChild(playerSelection);
+                                    
+const input = document.createElement("INPUT");
+    input.type = "radio";
+    input.name="player-selection";
+    input.classList.add("player-selection");
+    input.id="player-1";
+    playerSelection.appendChild(input);
+
+const label = document.createElement("label");
+    label.innerText = "X";
+    label.classList.add("player-text")
+    playerSelection.appendChild(label);
+
+const input2 = document.createElement("INPUT");
+    input2.type="radio";
+    input2.classList.add("player-selection");
+    input2.id="player-2";
+    input2.name="player-selection";
+    playerSelection.appendChild(input2);
+
+const label2 = document.createElement("label");
+    label2.innerText="O";
+    label2.classList.add("player-text");
+    playerSelection.appendChild(label2);
+
+const gameMode = document.createElement("div");
+    gameMode.classList.add("game-mode");
+    document.body.appendChild(gameMode);
+    gameMode.innerText = "hello";
+
+const multiplayer = document.createElement("input");
+    multiplayer.type="radio";
+    multiplayer.classList.add("multiplayer");
+    multiplayer.id="multiplayer";
+    multiplayer.name="game-mode";
+    gameMode.appendChild(multiplayer);
+
+const multiplayerLabel = document.createElement("label")
+    multiplayerLabel.innerText="2 player"
+    multiplayerLabel.classList.add("game-mode-text")
+    gameMode.appendChild(multiplayerLabel);
+
+const multiplayer2 = document.createElement("input");
+    multiplayer2.type="radio";
+    multiplayer2.classList.add("multiplayer");
+    multiplayer2.id="multiplayer";
+    multiplayer2.name="game-mode";
+    gameMode.appendChild(multiplayer2);
+
+const multiplayerLabel2 = document.createElement("label")
+    multiplayerLabel2.innerText="Computer"
+    multiplayerLabel2.classList.add("game-mode-text")
+    gameMode.appendChild(multiplayerLabel2);
+
+
+
+const gameBoard = document.createElement("div");
+    gameBoard.classList.add("game-board");
+    document.body.appendChild(gameBoard);
+
+let gridSize = 9
+
+function buildGrid () {
+    for(x=0; x<gridSize; x++) {
+        const boxes = document.createElement("div");
+        boxes.className="box";
+        boxes.id=x;
+        gameBoard.appendChild(boxes);
+    }
+}
+
+buildGrid();
+
+
+
+/* // Game state
+const players = ["O", "X"]
+const gameBoard = ['', '', '', '', '', '', '', '', ''];
+let currentPlayer;
+let gameBoardElem;
+
+// create a function to allow elements to be more flexible
+const createTitle = title => {
+    const titleElem = document.createElement("h1");
+
+    titleElem.textContent = title;
+    document.body.appendChild(titleElem);
+};
+
+const makeGameBoardElem = () => {
+    const gameBoardElem = document.createElement("div");
+
+    gameBoardElem.classList.add("game-board");
+
+    return gameBoardElem;
+};
+
+const makeSquareElem = squareNumber => {
+    const squareElement = document.createElement("div");
+
+    squareElement.classList.add("game-square");
+
+    squareElement.addEventListener("click", (event) => {
+        const {
+            target
+        } = event;
+        target.textContent = currentPlayer;
+        gameBoard[squareNumber] = currentPlayer;
+        // CheckBoard?
+        switchPlayers();
+    }, { once: true } // can only click each game-square once.
+    );
+
+    return squareElement;
+
+};
+
+const switchPlayers = () => {
+    if (currentPlayer === players[0]) {
+        currentPlayer = players[1];
+    } else {
+        currentPlayer = players[0];
+    }
+};
+
+const checkBoard = () => {
+    //gameBoard
+    // ["0", "1", "2"]
+    // ["3", "4", "5"]
+    // ["6", "7", "8"]
+    const winningStates = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+
+      for (let winState of winningStates) {
+        const [position1, position2, position3] = winState;
+
+        if (gameBoard[position1]!)
+      }
+}
+
+const resetGame = () => {
+    gameBoardElem = makeGameBoardElem();
+
+    for (let square = 0; square < 9; square++) {
+        gameBoardElem.appendChild(makeSquareElem(square));
+    }
+
+    currentPlayer = players[0];
+
+    document.body.appendChild(gameBoardElem);
+
+};
+
+createTitle("Tic-Tac-Toe");
+resetGame();
+ */
+
+
+
 /* second try below with help from mentor
 
 let boxes = Array.from(document.getElementsByClassName("box"));
@@ -54,7 +224,7 @@ resetBtn.addEventListener("click", reset)
 
 startGame() 
 
-- second try above ^ with help from mentor */ 
+- second try above ^ with help from mentor */
 
 /* - original try below
 
