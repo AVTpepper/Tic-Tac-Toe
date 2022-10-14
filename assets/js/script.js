@@ -73,7 +73,34 @@ function buildGrid () {
     }
 }
 
+const board = () => Array.from(document.getElementsByClassName("box"));
+const boxId= (boxEl) => Number.parseInt(boxEl.id);
+const emptyBoxes = () => grid().filter(_boxEl => _boxEl.innerText === "");
+const allSame = (arr) => arr.every(_boxEl => _boxEl.innerText === arr[0].innerText && _boxEl.innerText !=="");
+
+
+const takeTurn = (index, letter) => board()[index].innerText = letter;
+const opponentChoice = () => 0;
+
+const aiTurn = () => {
+    disableListeners();
+    setTimeout(() => {
+        takeTurn(opponentChoice(), "o");
+        enableListeners();
+    }, 1000);
+}
+
+const clicks = ($event) => {
+    takeTurn(boxId($event.target), "x");
+    aiTurn();
+}
+
+const enableListeners = () => board().forEach(_boxEl => _boxEl.addEventListener("click", clicks));
+const disableListeners = () => board().forEach(_boxEl => _boxEl.removeEventListener("click", clicks));
+
+
 buildGrid();
+enableListeners();
 
 
 
