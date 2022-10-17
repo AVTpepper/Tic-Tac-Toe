@@ -1,4 +1,204 @@
+let currentPlayer = "x";
+let gameState =["","","","","","","","",""];
+const gridSize = 9;
 
+function handleClick(clickedSquare, clickedSquareIndex) {
+  gameState[clickedSquareIndex] = currentPlayer;
+  clickedSquare.innerHTML = currentPlayer;
+}
+const winningConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
+
+const gameBoard = document.createElement("div");
+gameBoard.classList.add("game-board");
+document.body.appendChild(gameBoard);
+
+function createBoard () {
+  for(x = 0; x < gridSize; x++) {
+     const square = document.createElement("div")
+    square.className="square"
+    square.id= `box${x}`;
+    square.addEventListener("click", handleClick, {
+      once: true})
+  gameBoard.appendChild(square)
+  }
+}
+
+createBoard();
+
+function handleSquareClick(clickedSquareEvent) {
+  const clickedSquare = clickedSquareEvent.target;
+  const clickedCellIndex = parseInt(clickedSquare)
+}
+
+
+
+
+
+
+
+/* const playerOne = "x"
+const playerTwo = "o"
+const GameBoard = document.createElement("div");
+const squareElement = document.createElement("div");
+
+
+const startGame = () => {
+
+}
+
+*/
+
+
+
+/* Copied code
+const players = ["o", "x"]
+const gameBoard = ["","","","","","","","",""]
+let currentPlayer;
+let gameBoardElem;
+
+const makeGameBoardElem = () => {
+  const gameBoardElem = document.createElement("div");
+  gameBoardElem.classList.add("game-board");
+  return gameBoardElem;
+};
+
+const makeSquareElem = squareNumber => {
+  const squareElement = document.createElement("div");
+  squareElement.classList.add("game-square");
+  squareElement.addEventListener("click", (event) => {
+    const {target} = event;
+    target.textContent =currentPlayer;
+    gameBoard[squareNumber] = currentPlayer;
+    checkBoard();
+    switchPlayer();
+  }, {once:true});
+  return squareElement;
+};
+
+const emptyGameSquare = array.from(document.getElementsByClassName("game-board"));
+console.log (emptyGameSquare);
+
+const switchPlayer = () => {
+  if (currentPlayer === players[0]) {
+        currentPlayer = players [1];
+        
+       /* const aiTurn = () => {
+            //setTimeout(() => {
+            const index = Math.floor(Math.random() * boxElements.length)
+            const selectedBox = document.getElementById(boxElements[index])
+            selectedBox.innerText = "o"
+            //}, 1000);
+
+  } else {
+    currentPlayer = players[0];
+  }
+}
+
+const checkBoard = () => {
+  // gameBoard
+  // ["0", "1", "2"]
+  // ["3", "4", "5"]
+  // ["6", "7", "8"]
+  
+  const winningStates = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  
+  for (let winState of winningStates) {
+    const [position1, position2, position3] = winState;
+    
+    if (
+      gameBoard[position1] !== "" && 
+      gameBoard[position1] === gameBoard[position2] && 
+      gameBoard[position1] === gameBoard[position3]) {
+      completeGame(`${gameBoard[position1]} wins!`);
+    }
+  }
+  
+  const allSquaresUsed = gameBoard.every(square => square !== "");
+  
+  if(allSquaresUsed) {
+    completeGame(`It's a draw!`);
+  }
+};
+
+const completeGame = message => {
+  const overlayElem = document.createElement("div");
+  overlayElem.style.position ="fixed";
+  overlayElem.style.top ="0";
+  overlayElem.style.left ="0";
+  overlayElem.style.bottom ="0";
+  overlayElem.style.right ="0";
+  overlayElem.style.backgroundColor ="rgba(0,0,0,0.8)";
+  overlayElem.style.display ="flex";
+  overlayElem.style.flexDirection ="column";
+  overlayElem.style.justifyContent ="center";
+  overlayElem.style.alignItems ="center";
+  overlayElem.style.textAlign ="center";
+  
+  const messageElem = document.createElement ("h2");
+  messageElem.textContent=message;
+  messageElem.style.color="white";
+  messageElem.style.fontSize="100px";
+  
+  overlayElem.appendChild(messageElem);
+  
+  
+  const restartButtonElem = document.createElement("button");
+  restartButtonElem.textContent="Restart";
+  restartButtonElem.style.backgroundColor ="transparent";
+  restartButtonElem.style.color ="white";
+  restartButtonElem.style.border ="1px solid white";
+  restartButtonElem.style.padding ="10px 30px";
+  restartButtonElem.style.fontSize ="30px";
+  
+  restartButtonElem.addEventListener("click", () => {
+    resetGame();
+    document.body.removeChild(overlayElem);
+  });
+  overlayElem.appendChild(restartButtonElem);
+  
+  document.body.appendChild(overlayElem);
+  
+};
+
+
+
+const resetGame = () => {
+  if (gameBoardElem) {
+    document.body.removeChild(gameBoardElem);
+  }
+  
+  gameBoardElem = makeGameBoardElem();
+  for(let square = 0; square < 9; square++) {
+    gameBoardElem.appendChild(makeSquareElem(square));
+  }
+ 
+  currentPlayer = players[0];
+  gameBoard.fill("");
+  
+  document.body.appendChild(gameBoardElem);
+};
+
+resetGame(); */
+
+/* useless
 const playerSelection = document.createElement("div");
     playerSelection.classList.add("player-selection-wrap");
     document.body.appendChild(playerSelection);
@@ -54,33 +254,95 @@ const multiplayer2 = document.createElement("input");
 const multiplayerLabel2 = document.createElement("label")
     multiplayerLabel2.innerText="Computer"
     multiplayerLabel2.classList.add("game-mode-text")
-    gameMode.appendChild(multiplayerLabel2);
+    gameMode.appendChild(multiplayerLabel2); */
 
 
-
+/* with help from mentor v2
 const gameBoard = document.createElement("div");
-    gameBoard.classList.add("game-board");
-    document.body.appendChild(gameBoard);
+gameBoard.classList.add("game-board");
+document.body.appendChild(gameBoard);
 
 let gridSize = 9
 
-function buildGrid () {
-    for(x=0; x<gridSize; x++) {
+function buildGrid() {
+    for (x = 0; x < gridSize; x++) {
         const boxes = document.createElement("div");
-        boxes.className="box";
-        boxes.id=x;
+        boxes.className = "box";
+        boxes.id = `box${x}`;
+        boxes.addEventListener("click", handleClick, {
+            once: true
+        })
         gameBoard.appendChild(boxes);
     }
 }
+buildGrid();
 
+let boxElements = Array.from(document.getElementsByClassName("box"), (box) => {
+    return box.id
+});
+
+console.log(boxElements);
+
+function handleClick(event) {
+    console.log("clicked")
+    event.target.innerText = "x"
+    boxElements = boxElements.filter((box) => {
+        return box !== event.target.id
+    });
+    console.log(boxElements);
+
+    aiTurn();
+
+}
+checkBoard();
+
+const aiTurn = () => {
+    //setTimeout(() => {
+    const index = Math.floor(Math.random() * boxElements.length)
+    const selectedBox = document.getElementById(boxElements[index])
+    selectedBox.innerText = "o"
+    //}, 1000);
+}
+
+const checkBoard = () => {
+    const winningPatterns = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+    ];
+
+    for (let winPattern of winningPatterns) {
+        const [position1, position2, position3] = winPattern;
+
+        if (
+            boxes[position1] !== "" &&
+            boxes[position1] === boxes[position2] &&
+            boxes[position1] === boxes[position3]) {
+            alert(`${boxes[position1]}'s wins!`);
+        }
+    }
+
+};
+
+*/
+
+
+
+
+/* credit to YouTube creator PortEXE for this code logic
 const board = () => Array.from(document.getElementsByClassName("box"));
-const boxId= (boxEl) => Number.parseInt(boxEl.id);
-const emptyBoxes = () => grid().filter(_boxEl => _boxEl.innerText === "");
+const boxId = (boxEl) => Number.parseInt(boxEl.id);
+const emptyBoxes = () => board().filter(_boxEl => _boxEl.innerText === "");
 const allSame = (arr) => arr.every(_boxEl => _boxEl.innerText === arr[0].innerText && _boxEl.innerText !=="");
 
 
 const takeTurn = (index, letter) => board()[index].innerText = letter;
-const opponentChoice = () => 0;
+const opponentChoice = () => boxId(emptyBoxes()[Math.floor(Math.random() * emptyBoxes.length)]);
 
 const aiTurn = () => {
     disableListeners();
@@ -101,7 +363,7 @@ const disableListeners = () => board().forEach(_boxEl => _boxEl.removeEventListe
 
 buildGrid();
 enableListeners();
-
+*/
 
 
 /* // Game state
