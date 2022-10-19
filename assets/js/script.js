@@ -26,6 +26,7 @@ createBoard();
 
 const buttonGroup = document.getElementById("game");
 
+
 const buttonGroupPressed = e => {
 
   let eachSquare = document.getElementsByClassName("square");
@@ -85,7 +86,7 @@ function checkWinner(input1, input2) {
     if (arrO.indexOf(num1) !== -1 && arrO.indexOf(num2) !== -1 && arrO.indexOf(num3) !== -1) {
       document.getElementById("player-2").innerHTML = points2;
       points2++;
-      document.getElementById("player-2").innerHTML = points2
+      document.getElementById("result").innerHTML = "Player 2 wins!"
       gameOver = true;
 
     }
@@ -108,6 +109,29 @@ function isEven(n) {
 
 
 buttonGroup.addEventListener("click", buttonGroupPressed);
+
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", clearBoard);
+
+function clearBoard() {
+  gameState1 = [];
+  gameState2 = [];
+  counter = 0
+  gameOver = false;
+  document.getElementById("result").innerHTML = "";
+  var square = document.getElementsByClassName("square");
+  for (var i = 0; i < square.length; i++) {
+    square[i].textContent = "";
+  }
+};
+
+const resetScoreBtn = document.getElementById("reset-score")
+resetScoreBtn.addEventListener("click", resetScore)
+
+function resetScore() {
+  points1 = 0;
+  points2 = 0;
+}
 
 /*let currentPlayer = "x";
 let gameState =["","","","","","","","",""];

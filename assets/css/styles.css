@@ -1,36 +1,14 @@
 .game-board {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    width: 306px;
-    margin: 10px auto;
-    background-color: #11213a;
-    color: #04c0b2;
-}
-
+    height: 450px;
+    width: 450px;
+      display: grid;
+     grid-template-columns: 150px 150px 150px;
+     grid-template-rows: 150px 150px 150px;
+      justify-items: center;
+      align-items: center;
+      margin: auto;
+  }
   .square {
-    font-family: "Permanent Marker", cursive;
-    width: 100px;
-    height: 100px;
-    box-shadow: 2px 2px 2px 2px #ecd7ba;
-    border: 2px solid #ecd7ba;
-    cursor: pointer;
-    line-height: 100px;
-    font-size: 60px;
-}
-
-/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
-.game-board {
-    height: 450px;
-    width: 450px;
-      display: grid;
-     grid-template-columns: 150px 150px 150px;
-     grid-template-rows: 150px 150px 150px;
-      justify-items: center;
-      align-items: center;
-      margin: auto;
-  }
-  .game-square {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -42,150 +20,10 @@
       cursor: pointer;
   }
   
-  .game-square:nth-child(3n) {
+  .square:nth-child(3n) {
     border-right: none;
   }
   
-  .game-square:nth-child(n+7) {
-    border-bottom: none;
-  }
-/* OG idea
-* {
-    box-sizing: border-box;
+  .square:nth-child(n+7) {
+    border-bottom: none; 
 }
-
-body {
-    font-family: "Playfair Display", serif;
-    padding: 50px;
-}
-
-h1 {
-    font-size: 50px;
-}
-
-.game-board {
-    height: 450px;
-    width: 450px;
-      display: grid;
-     grid-template-columns: 150px 150px 150px;
-     grid-template-rows: 150px 150px 150px;
-      justify-items: center;
-      align-items: center;
-      margin: auto;
-  }
-  .box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 100px;
-    height: 100%;
-    width: 100%;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-      cursor: pointer;
-  }
-  
-  .box:nth-child(3n) {
-    border-right: none;
-  }
-  
-  .box:nth-child(n+7) {
-    border-bottom: none;
-  }
-
-.game-square:hover{
-    background-color: lightgrey;
-}
-*/
-
-/* OG OG idea 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Playfair Display", serif;
-}
-body {
-    background-color: lightyellow;
-}
-h1 { 
-    text-align: center;
-    font-size: 42px;
-    margin-top: 30px;
-}
-
-.score-board {
-    display: flex;
-    justify-content: center;
-    margin: 25px;
-    font-size: 36px;
-    text-align: center;
-}
-
-.game-board {
-    width: 100vw;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    grid-template-columns: repeat(3, auto);
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
-}
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: lightyellow;
-    border: 1px solid black;
-    cursor:pointer;
-    font-size: 75px;
-    text-align: center;
-}
-
-.button-area {
-    
-    display: flex;
-    justify-content: center;
-}
-
-button {
-    font-size: 20px;
-    width: 100px;
-    margin: 20px;
-    cursor: pointer;
-}
-
-.br-0 {
-    border-right: none;
-}
-
-.bl-0 {
-
-}
-
-.bb-0 {
-
-}
-
-.bt-0 {
-
-}
-
-
-#box0, #box1, #box2 {
-    border-top: none;
-}
-
-#box0, #box3, #box6 {
-    border-left: none;
-}
-
-#box2, #box5, #box8 {
-    border-right: none;
-}
-
-#box6, #box7, #box8 {
-    border-bottom: none;
-}
-*/
