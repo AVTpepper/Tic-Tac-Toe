@@ -1,3 +1,58 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.player {
+    justify-content: center;
+    display: flex;
+}
+
+h3 {
+    margin-right: 50px;
+    margin-bottom: 0px;
+}
+
+
+
+#player-1, #player-2 {
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+#player-1 {
+    margin-bottom: 0px;
+}
+
+#reset-score {
+    width: 200px;
+    margin: auto;
+}
+
+#reset {
+    margin: auto; 
+    width: 200px;
+    align-self: center;
+    margin-top: 10px;
+}
+
+#result {
+    text-align: center;
+}
+
 .game-board {
     height: 450px;
     width: 450px;
