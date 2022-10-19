@@ -84,9 +84,9 @@ function checkWinner(input1, input2) {
     // check if Player Two is the winner.
     //checks to see if the indexes clicked match up with any of the winning combinations.
     if (arrO.indexOf(num1) !== -1 && arrO.indexOf(num2) !== -1 && arrO.indexOf(num3) !== -1) {
-      document.getElementById("player-2").innerHTML = points2;
-      points2++;
       document.getElementById("result").innerHTML = "Player 2 wins!"
+      points2++;
+      document.getElementById("player-2").innerHTML = points2;
       gameOver = true;
 
     }
