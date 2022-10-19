@@ -74,7 +74,7 @@ function checkWinner(input1, input2) {
     // Check if Player One is the winner.
     // Checks to see if the indexes clicked match up with any of the winning combinations.
     if (arrX.indexOf(num1) !== -1 && arrX.indexOf(num2) !== -1 && arrX.indexOf(num3) !== -1) {
-      alert("player 1 wins")
+      document.getElementById("result").innerHTML = "Player 1 wins!"
       points1++;
       document.getElementById("player-1").innerHTML = points1;
       gameOver = true;
@@ -83,7 +83,7 @@ function checkWinner(input1, input2) {
     // check if Player Two is the winner.
     //checks to see if the indexes clicked match up with any of the winning combinations.
     if (arrO.indexOf(num1) !== -1 && arrO.indexOf(num2) !== -1 && arrO.indexOf(num3) !== -1) {
-      alert("player 2 wins")
+      document.getElementById("player-2").innerHTML = points2;
       points2++;
       document.getElementById("player-2").innerHTML = points2
       gameOver = true;
@@ -92,7 +92,7 @@ function checkWinner(input1, input2) {
   };
   // if neither player wins and the board is full then this if statement is true.
   if (counter === 8 && gameOver !== true) {
-    alert("its a draw!")
+    document.getElementById("result").innerHTML = "It's a draw!";
     gameOver = true;
   }
 };
