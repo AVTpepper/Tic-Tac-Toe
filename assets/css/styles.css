@@ -38,6 +38,9 @@ h3 {
 #player-1 {
     margin-bottom: 0px;
 }
+#player-2 {
+    margin-bottom: 10px;
+}
 
 #reset-score {
     width: 200px;

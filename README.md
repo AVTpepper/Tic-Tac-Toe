@@ -1,108 +1,55 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# __Portfolio Porject 2 - Tic Tac Toe__
 
-Welcome AVTpepper,
+The Tic Tac Toe website is for anyone looking for an online game that has elements of competition and strategy. This website is created for somebody who is looking for some quick fun with a friend, or by themselves. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Responsive Mock Up] image here.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## __Wireframes__
+Before starting the project I created my ideal look of the Tic Tac Toe website to have an idea of what I pictured myself creating. This was the beginning of the project and I had high hopes of what I was going to be able to accomplish. 
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![Mobile & Desktop Wireframe](/assets/images/wireframe-tictactoe-mobile%2Bdesktop-smaller-version.png)
 
 ---
 
-Happy coding!
+## __Features__
+This website has a low count of features, but in the future it will be fun to come back and add the features that I have in mind.
+
+### __Existing Features__
+
+- __Heading__
+    - Simple and minimalistic header to open the page. It is clear what the intention of the website is.
+![Image of header] image here.
+
+- __Scoreboard__
+    - Next we have the scoreboard. This is where the points will be tracked for each round won by each player. 
+![Scoreboard] image here.
+
+- __Game Controls__
+    - Here we have our game controls. With these buttons you can control the scoreboard and the playing board. The action of the button is written on the button itself. The top button will reset the score and the bottom bottom will start a new round and clear the board.
+![Game Controls] image here.
+
+- __Playing Board__
+    - This is where the action takes place. Each square is clickable, and each click will alternate between "X" and "O".
+![Playing Board] image here.
+
+### __Technologies Used__
+- HTML
+- CSS
+- JavaScript
+
+### __Features Left To Implement__
+I have several features I would like to implement:
+- More website visitor controls over the game. Such as:
+    - Chosing what marker they want to be, "X" or "O".
+    - Chosing to play against the computer or another player.
+- Creating the computer controlled player.
+- Adding more style to the page.
+- Adding hover effects.
+- Adding a help menu.
+---
+
+## __Testing__
+
+Running my JavaScript code through jshint.com I realised I was missing quite a few semicolons and had some unecessary ones, so I spent some time to get that corrected. I also got warnings such as: 
+- 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)  & 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) which I am not sure how to fix.
+
