@@ -1,4 +1,112 @@
-let currentPlayer = "x";
+let player1 = "x";
+let player2 = "o";
+let gameState1 =[];
+let gameState2 =[];
+const gridSize = 9;
+let gameOver = false;
+let counter = 0;
+let points1 = 0;
+let points2 = 0;
+
+const gameBoard = document.createElement("div");
+gameBoard.classList.add("game-board");
+gameBoard.setAttribute("id","game");
+document.body.appendChild(gameBoard);
+
+function createBoard () {
+  for(x = 0; x < gridSize; x++) {
+     const square = document.createElement("div")
+    square.className="square"
+    square.id= x+1;
+  gameBoard.appendChild(square)
+  }
+}
+
+createBoard();
+
+const buttonGroup = document.getElementById("game");
+
+const buttonGroupPressed = e => { 
+  
+ let eachSquare = document.getElementsByClassName("square");
+
+ for(x = 0; x < eachSquare.length; x++){
+   
+   if(eachSquare[x].id === e.target.id){
+      if(isEven(counter)) {
+      console.log("this in number", x)
+      eachSquare[x].innerHTML = player1;
+      gameState1.push(e.target.id)
+      console.log("current score", gameState1);
+      checkWinner(gameState1, gameState2);
+      counter++
+    } else {
+      console.log("this in number", x)
+      eachSquare[x].innerHTML = player2;
+      gameState2.push(e.target.id)
+      console.log("current score", gameState2);
+      checkWinner(gameState1, gameState2);
+      counter++
+    } 
+   }
+ }  
+}
+
+function checkWinner(input1, input2) {
+
+    let arrX = input1;
+    let arrO = input2;
+
+    // all the winning combinations
+    let winningComb = ["123", "456", "789", "147", "369", "357", "159", "258"];
+
+    //looping through the winning combination array
+    for (let k = 0; k < winningComb.length; k++) {
+        let numArr = winningComb[k].split("");
+        //console.log(numArr);
+
+        let num1 = numArr[0]; // first winning number
+        let num2 = numArr[1]; // second winning number
+        let num3 = numArr[2]; // third winning number
+
+        // check if Player One is the winner
+        //if the player click all the boxes with the same index numbers  as in the array
+        if (arrX.indexOf(num1) !== -1 && arrX.indexOf(num2) !== -1 && arrX.indexOf(num3) !== -1) {
+            alert("player 1 wins")
+            points1++;
+          document.getElementById("player-1").innerHTML = points1;
+          gameOver=true;
+         
+        }
+        // check if Player Two is the winner
+        //if the player click all the boxes with the same index numbers  as in the array
+        if (arrO.indexOf(num1) !== -1 && arrO.indexOf(num2) !== -1 && arrO.indexOf(num3) !== -1) {
+            alert("player 2 wins")
+          points2++;
+          document.getElementById("player-2").innerHTML = points2
+          gameOver = true;
+          
+        } 
+      };
+      if (counter === 8 && gameOver !==true) {
+        alert("its a draw!")
+        gameOver=true;
+    } 
+    };
+     
+    
+
+
+
+function isEven(n) {
+    return n % 2 == 0;
+};
+
+
+
+buttonGroup.addEventListener("click", buttonGroupPressed);
+
+/*let currentPlayer = "x";
 let gameState =["","","","","","","","",""];
 const gridSize = 9;
 
