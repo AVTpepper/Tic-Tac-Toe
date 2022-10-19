@@ -129,9 +129,12 @@ const resetScoreBtn = document.getElementById("reset-score")
 resetScoreBtn.addEventListener("click", resetScore)
 
 function resetScore() {
+  points1 = document.getElementById("player-1").textContent="0";
+  points2 = document.getElementById("player-2").textContent="0";
+
   points1 = 0;
   points2 = 0;
-}
+};
 
 /*let currentPlayer = "x";
 let gameState =["","","","","","","","",""];
