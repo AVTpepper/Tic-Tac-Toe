@@ -1,4 +1,4 @@
-# __Portfolio Porject 2 - Tic Tac Toe__
+# __Portfolio Project 2 - Tic Tac Toe__
 
 The Tic Tac Toe website is for anyone looking for an online game that has elements of competition and strategy. This website is created for somebody who is looking for some quick fun with a friend, or by themselves. 
 
