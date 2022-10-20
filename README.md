@@ -18,19 +18,23 @@ This website has a low count of features, but in the future it will be fun to co
 
 - __Heading__
     - Simple and minimalistic header to open the page. It is clear what the intention of the website is.
-![Image of header] image here.
+![Image of header](/assets/images/tic-tac-toe-heading.png)
 
 - __Scoreboard__
     - Next we have the scoreboard. This is where the points will be tracked for each round won by each player. 
-![Scoreboard] image here.
+![Scoreboard](/assets/images/tic-tac-toe-scoreboard.png)
 
 - __Game Controls__
     - Here we have our game controls. With these buttons you can control the scoreboard and the playing board. The action of the button is written on the button itself. The top button will reset the score and the bottom bottom will start a new round and clear the board.
-![Game Controls] image here.
+![Game Controls](/assets/images/tic-tac-toe-game-controls.png)
+
+- __Winning Message__
+    - This is an area on the page where a winning message will pop up once there is a winning combination on the playing board.
+![Winning Message](/assets/images/winning-message.png)
 
 - __Playing Board__
     - This is where the action takes place. Each square is clickable, and each click will alternate between "X" and "O".
-![Playing Board] image here.
+![Playing Board](/assets/images/tic-tac-toe-playing-board.png)
 
 ### __Technologies Used__
 - HTML
@@ -54,4 +58,7 @@ Running my JavaScript code through jshint.com I realised I was missing quite a f
 - 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)  & 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) which I am not sure how to fix.
 
 ### __Lighthouse Test__
+
+After a bit of tinkering with labels, meta tags and html structure this is the final score that I got through Lighthouse testing:
+![Lighthouse test results](/assets/images/lighthouse_test.png)
 
