@@ -1,3 +1,4 @@
+// vairables used throughout the game
 let player1 = "x";
 let player2 = "o";
 let gameState1 = [];
@@ -8,11 +9,13 @@ let counter = 0;
 let points1 = 0;
 let points2 = 0;
 
+// creates a div for the html file
 const gameBoard = document.createElement("div");
 gameBoard.classList.add("game-board");
 gameBoard.setAttribute("id", "game");
 document.body.appendChild(gameBoard);
 
+// creates each square on the game board
 function createBoard() {
   for (x = 0; x < gridSize; x++) {
     const square = document.createElement("div")
@@ -26,13 +29,12 @@ createBoard();
 
 const buttonGroup = document.getElementById("game");
 
-
 const buttonGroupPressed = e => {
 
   let eachSquare = document.getElementsByClassName("square");
 
   for (x = 0; x < eachSquare.length; x++) {
-
+    // for this loop I got guidance from GitHub user devinardya 
     if (eachSquare[x].id === e.target.id) {
       if (eachSquare[x].textContent === "" && gameOver === false) {
         if (isEven(counter)) {
@@ -54,16 +56,16 @@ const buttonGroupPressed = e => {
     }
   }
 }
-
+// I also received guidance from GitHub user in creating the checkWinner function, specifically with the loop.
 function checkWinner(input1, input2) {
 
   let arrX = input1;
   let arrO = input2;
 
-  // All the winning combinations.
+  // all the winning combinations.
   let winningComb = ["123", "456", "789", "147", "369", "357", "159", "258"];
 
-  // Looping through the winning combination array.
+  // looping through the winning combination array.
   for (let k = 0; k < winningComb.length; k++) {
     let numArr = winningComb[k].split("");
 
@@ -72,8 +74,8 @@ function checkWinner(input1, input2) {
     let num2 = numArr[1]; // second winning number
     let num3 = numArr[2]; // third winning number
 
-    // Check if Player One is the winner.
-    // Checks to see if the indexes clicked match up with any of the winning combinations.
+    // check if Player One is the winner.
+    // check to see if the indexes clicked match up with any of the winning combinations.
     if (arrX.indexOf(num1) !== -1 && arrX.indexOf(num2) !== -1 && arrX.indexOf(num3) !== -1) {
       document.getElementById("result").innerHTML = "Player 'X' wins!"
       points1++;
@@ -82,7 +84,7 @@ function checkWinner(input1, input2) {
 
     }
     // check if Player Two is the winner.
-    //checks to see if the indexes clicked match up with any of the winning combinations.
+    // check to see if the indexes clicked match up with any of the winning combinations.
     if (arrO.indexOf(num1) !== -1 && arrO.indexOf(num2) !== -1 && arrO.indexOf(num3) !== -1) {
       document.getElementById("result").innerHTML = "Player 'O' wins!"
       points2++;
@@ -98,15 +100,9 @@ function checkWinner(input1, input2) {
   }
 };
 
-
-
-
-
 function isEven(n) {
   return n % 2 == 0;
 };
-
-
 
 buttonGroup.addEventListener("click", buttonGroupPressed);
 
@@ -130,10 +126,8 @@ resetScoreBtn.addEventListener("click", resetScore)
 
 function resetScore() {
   clearBoard()
-  points1 = document.getElementById("player-1").textContent="0";
-  points2 = document.getElementById("player-2").textContent="0";
-
+  points1 = document.getElementById("player-1").textContent = "0";
+  points2 = document.getElementById("player-2").textContent = "0";
   points1 = 0;
   points2 = 0;
 };
-
