@@ -33,8 +33,6 @@ span {
     margin-right: 30px;
 }
 
-
-
 #player-1,
 #player-2 {
     font-size: 1.3em;
@@ -47,6 +45,7 @@ span {
 
 #player-1 {
     margin-bottom: 0px;
+    
 }
 #player-2 {
     margin-bottom: 10px;
