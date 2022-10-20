@@ -4,7 +4,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 241, 222);
-    
 }
 
 h1 {
@@ -45,8 +44,8 @@ span {
 
 #player-1 {
     margin-bottom: 0px;
-    
 }
+
 #player-2 {
     margin-bottom: 10px;
 }
