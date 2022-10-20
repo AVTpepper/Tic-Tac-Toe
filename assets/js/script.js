@@ -129,6 +129,7 @@ const resetScoreBtn = document.getElementById("reset-score")
 resetScoreBtn.addEventListener("click", resetScore)
 
 function resetScore() {
+  clearBoard()
   points1 = document.getElementById("player-1").textContent="0";
   points2 = document.getElementById("player-2").textContent="0";
 
