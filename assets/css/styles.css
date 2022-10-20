@@ -18,16 +18,22 @@ h1 {
     display: flex;
 }
 
-h3 {
+span {
     margin-right: 50px;
     margin-bottom: 0px;
+    font-size: 1.3em;
+    margin-block-start: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-right: 30px;
 }
 
 
 
 #player-1,
 #player-2 {
-    font-size: 1.17em;
+    font-size: 1.3em;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -59,11 +65,11 @@ h3 {
 }
 
 .game-board {
-    height: 450px;
+    height: 55vh;
     width: 450px;
     display: grid;
     grid-template-columns: 150px 150px 150px;
-    grid-template-rows: 150px 150px 150px;
+    grid-template-rows: 33% 33% 33%;
     justify-items: center;
     align-items: center;
     margin: auto;

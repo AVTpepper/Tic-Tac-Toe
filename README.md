@@ -53,3 +53,5 @@ I have several features I would like to implement:
 Running my JavaScript code through jshint.com I realised I was missing quite a few semicolons and had some unecessary ones, so I spent some time to get that corrected. I also got warnings such as: 
 - 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)  & 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) which I am not sure how to fix.
 
+### __Lighthouse Test__
+
