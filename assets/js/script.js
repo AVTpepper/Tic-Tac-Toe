@@ -38,17 +38,13 @@ const buttonGroupPressed = e => {
     if (eachSquare[x].id === e.target.id) {
       if (eachSquare[x].textContent === "" && gameOver === false) {
         if (isEven(counter)) {
-          console.log("this in number", x)
           eachSquare[x].innerHTML = player1;
           gameState1.push(e.target.id)
-          console.log("current score", gameState1);
           checkWinner(gameState1, gameState2);
           counter++
         } else {
-          console.log("this in number", x)
           eachSquare[x].innerHTML = player2;
           gameState2.push(e.target.id)
-          console.log("current score", gameState2);
           checkWinner(gameState1, gameState2);
           counter++
         }
