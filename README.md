@@ -27,7 +27,7 @@ This website does have some features, but in the future it will be fun to come b
 ![Scoreboard](/assets/images/tic-tac-toe-scoreboard.png)
 
 - __Game Controls__
-    - Here we have our game controls. With these buttons you can control the scoreboard and the playing board. The action of the button is written on the button itself. The top button will reset the score and the bottom bottom will start a new round and clear the board.
+    - Here we have our game controls. With these buttons, you can control the scoreboard and the playing board. The action of the button is written on the button itself. The top button will reset the score and the bottom will start a new round and clear the board.
 
 ![Game Controls](/assets/images/tic-tac-toe-game-controls.png)
 
@@ -49,8 +49,8 @@ This website does have some features, but in the future it will be fun to come b
 ### __Features Left To Implement__
 I have several features I would like to implement:
 - More website visitor controls over the game. Such as:
-    - Chosing what marker they want to be, "X" or "O".
-    - Chosing to play against the computer or another player.
+    - Choosing what marker they want to be, "X" or "O".
+    - Choosing to play against the computer or another player.
 - Creating the computer controlled player.
 - Adding more style to the page.
 - Adding hover effects.
@@ -59,12 +59,12 @@ I have several features I would like to implement:
 
 ## __Testing__
 
-Running my JavaScript code through jshint.com I realised I was missing quite a few semicolons and had some unecessary ones, so I spent some time to get that corrected. I also got warnings such as: 
+Running my JavaScript code through jshint.com, I realized I was missing quite a few semicolons and had some unnecessary ones, so I spent some time to get that corrected. I also got warnings such as: 
 - 	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz)  & 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) which I am not sure how to fix.
 
 ### __Lighthouse Test__
 
-After a bit of tinkering with labels, meta tags and html structure this is the final score that I got through Lighthouse testing:
+After a bit of tinkering with labels, meta tags and HTML structure, this is the final score that I got through Lighthouse testing:
 
 ![Lighthouse test results](/assets/images/lighthouse_test.png)
 
@@ -78,10 +78,10 @@ After a bit of tinkering with labels, meta tags and html structure this is the f
     From line 40, column 3; to line 40, column 18
     button>↩  <h2 id="result"></h2>↩
     ```
-    - The warning was fixed immediatley by chancing the h2 element to a span element. 
+    - The warning was fixed immediately by chancing the h2 element to a span element. 
 
 - __CSS__
-    - - First time running the HTML through the [W3B validator](https://validator.w3.org/css-validator/) no erros and no warnings were found.
+    - - First time running the HTML through the [W3B validator](https://validator.w3.org/css-validator/) no errors and no warnings were found.
 ---
 ## __Deployment__
 
@@ -89,18 +89,18 @@ This project was deployed on GitHub. Below are the steps I followed to be able t
 1. In the GitHub repository, navigate to the Settings tab.
 2. Scroll down until you see GitHub pages.
 3. From the source section drop-down menu, select the main branch.
-4. Once the main branch has been selected hit the save button.
-5. Finally, when the page is refreshed there will be a detailed ribbon display to indicate the successful deployment.
+4. Once the main branch has been selected, hit the save button.
+5. Finally, when the page is refreshed, there will be a detailed ribbon display to indicate the successful deployment.
 
 The live link can be found here: https://avtpepper.github.io/Tic-Tac-Toe/
 
 ---
 ## __Credits__
 ### Code
-- Coding logic was hard to define, I watched several YouTube videos and tried to combine those to create my own logic. During the process I received help from github user [@devinardya](https://github.com/devinardya)
+- Coding logic was hard to define, I watched several YouTube videos and tried to combine those to create my own logic. During the process, I received help from GitHub user [@devinardya](https://github.com/devinardya)
 ---
 ## __Special Thanks__
-Special thanks goes out to:
+Special thanks go out to:
 - My mentor Maranatha Ilesanmi for guiding me through the project.
 - GitHub user [@devinardya](https://github.com/devinardya) for help with testing and understanding the game logic.
 
